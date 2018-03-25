@@ -9,7 +9,8 @@ function Input() {
 }
 
 /**
- * load a file from file path
+ * load an input HTML file from the path
+ * @param {object} filepath - used to feed in HTML file source
  */
 Input.prototype.loadInputFile = function(filepath) {
     return function() {
@@ -23,6 +24,10 @@ Input.prototype.loadInputFile = function(filepath) {
     }
 }
 
+/**
+ * load an input from A Node Readable Stream
+ * @param {object} stream - used to feed in HTML file source
+ */
 Input.prototype.loadInputStream = function(stream) {
     return function() {
         var deferred = when.defer();

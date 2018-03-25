@@ -3,10 +3,18 @@ var fs = require('fs');
 function Output() {
 }
 
+/**
+ * create a pretty string for object
+ * @param {object} msg
+ */
 function pretty(msg) {
     return JSON.stringify(msg, null, 2);
 }
 
+/**
+ * create an output console
+ * @param {object} output - console
+ */
 Output.prototype.createOutputConsole = function () {
 
     // write function
@@ -16,8 +24,8 @@ Output.prototype.createOutputConsole = function () {
 }
 
 /**
- * Open a file from file path
- * @param {string} filePath - the location of the HTML file
+ * create an output file with file path
+ * @param {string} filePath - the location of file to save the validation result
  */
 Output.prototype.createOutputFile = function (filePath) {
 
@@ -33,7 +41,7 @@ Output.prototype.createOutputFile = function (filePath) {
 }
 
 /**
- * Open a node writeable stream
+ * Create a node writeable stream
  * @param {object} stream - A node writeable stream
  */
 Output.prototype.createOutputStream = function (stream) {
