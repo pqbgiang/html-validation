@@ -1,0 +1,23 @@
+{
+  "name": "html-validate",
+  "version": "0.1.0",
+  "description": "The module to scan and validate any tags in local HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "tag",
+    "validate",
+    "seo"
+  ],
+  "author": "pqbgiang@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^3.9.2",
+    "lodash": "^4.17.5",
+    "underscore": "^1.8.3",
+    "when": "^3.7.8"
+  }
+}

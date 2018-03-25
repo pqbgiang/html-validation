@@ -1,0 +1,7 @@
+{
+  "img": "2 <img> tag without alt",
+  "a": "1 <a> tag without rel",
+  "header": "This HTML has no  <title> tag, count=0. 0 <meta> tag without name=description. 0 <meta> tag without name=robots. 0 <meta> tag without name=keywords. ",
+  "strong": "This HTML has more than 15 <strong> tag, count=17",
+  "h1": "This HTML has more than 1 <h1> tag, count=6"
+}
