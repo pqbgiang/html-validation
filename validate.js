@@ -41,7 +41,7 @@ function checkNoActtributeAndValue(tags, tagName, tagAttribute, tagAttributeValu
         tag.attributes[tagAttribute] == tagAttributeValue).length;
 
     if(count == 0) {
-        return count + " <" + tagName + "> tag without " + tagAttribute + "=" + tagAttributeValue;          
+        return "No <" + tagName + "> tag having " + tagAttribute + "=" + tagAttributeValue;          
     }
 
     //return "No <" + tagName + "> without " + tagAttribute + "=" + tagAttributeValue+ ", count=" + count + " (no defect)"; //no defect found! to debug
@@ -113,17 +113,14 @@ function validateHeader(tags, rules) {
     var result = "";
     if(rules.hasOwnProperty('title')) {
         result = checkNoTag(tags, 'title');
-        if(result.length > 0) {
-            result = result + ". ";
-        }
     }
     
     if(rules.hasOwnProperty('meta')) {
         var meta = rules.meta;
         _.each(meta, function(metaItem) {
-            result = result + checkNoActtributeAndValue(tags, 'meta', 'name', metaItem);
-            if(result.length > 0) {
-                result = result + ". ";
+            var res = checkNoActtributeAndValue(tags, 'meta', 'name', metaItem);
+            if(res.length > 0) {
+                result = result + ". " + res;
             }
         });
     }

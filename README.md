@@ -18,12 +18,11 @@ Install Scanning HTML file SEO defects globally using npm:
 Output should be printed to terminal like below:
 ```js
 Starting the validation html file with:
-rules: {"img":"alt","a":"rel","header":{"title":true,"meta":["description","robots","keywords
-"]},"strong":15,"h1":1}
+rules: {"img":"alt","a":"rel","header":{"title":true,"meta":["description","robots","keywords"]},"strong":15,"h1":1}
 {
   "img": "2 <img> tag without alt",
   "a": "1 <a> tag without rel",
-  "header": "0 <meta> tag without name=robots. . ",
+  "header": ". No <meta> tag having name=keywords",
   "strong": "",
   "h1": "This HTML has more than 1 <h1> tag, count=6"
 }
